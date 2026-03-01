@@ -2,7 +2,7 @@
 
 A modular and state-driven shopping cart built with **Vanilla TypeScript**.
 
-This project demonstrates clean architecture, state management, and DOM manipulation.
+This project is built to practice TypeScript fundamentals, including clean architecture, state-driven UI updates, and safe DOM manipulation. It serves as a learning milestone in my TypeScript development journey.
 
 ---
 
