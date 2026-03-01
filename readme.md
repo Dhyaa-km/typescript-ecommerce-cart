@@ -2,7 +2,7 @@
 
 A modular and state-driven shopping cart built with **Vanilla TypeScript**.
 
-This project demonstrates clean architecture, state management, and DOM manipulation without any frontend framework.
+This project demonstrates clean architecture, state management, and DOM manipulation.
 
 ---
 
@@ -21,6 +21,38 @@ This project demonstrates clean architecture, state management, and DOM manipula
 
 The project follows a modular structure:
 
+```
+└── 📁ecomCart
+    └── 📁.vscode
+        ├── settings.json
+    └── 📁ecommerce-carttt
+        └── 📁public
+            ├── typescript.svg
+            ├── vite.svg
+        └── 📁src
+            ├── main.ts
+            ├── types.ts
+            ├── state/
+            │     └── cartState.ts
+            │
+            ├── services/
+            │     └── cartService.ts
+            │
+            ├── ui/
+            │     ├── renderCart.ts
+            │     └── cartEvents.ts
+            │     └── renderProducts.ts
+            │     └── search.ts
+            │
+            └── utils/
+                └── format.ts
+        ├── .gitignore
+        ├── index.html
+        ├── package-lock.json
+        ├── package.json
+        └── tsconfig.json
+```
+
 - `renderProducts.ts` → Product rendering
 - `cartService.ts` → Cart logic (add/remove/update)
 - `cartState.ts` → Centralized cart state
@@ -34,41 +66,17 @@ Cart UI is derived from state instead of manual DOM counters.
 
 - TypeScript
 - DOM API
-- Modular architecture (ES Modules)
+- Modular architecture (ES6 Modules)
 
 ---
 
 ## 📦 Installation
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/typescript-ecommerce-cart.git
-cd typescript-ecommerce-cart
+git clone https://github.com/Dhyaa-km/typescript-ecommerce-cart.git
+cd ecommerce-carttt
 npm install
 npm run dev
 ```
 
----
 
-## 🎯 What I Learned
-
-- TypeScript strict typing
-- Managing state without frameworks
-- Avoiding `any`
-- Deriving UI from state
-- Clean code architecture
-
----
-
-## 📌 Future Improvements
-
-- LocalStorage persistence
-- Total price calculation
-- Product quantity merging
-- UI animations
-- Convert to React version
-
----
-
-## 👨‍💻 Author
-
-Kerrouche
