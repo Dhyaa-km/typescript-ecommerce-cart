@@ -63,7 +63,7 @@ The project follows a modular structure:
 - `renderProducts.ts` → Product grid rendering + cart count sync
 - `cartService.ts` → Cart logic (add / remove / update quantity)
 - `cartState.ts` → Centralized cart state with `localStorage` persistence
-- `renderCart.ts` → Sidebar cart UI rendering based on state
+- `renderCart.ts` → Cart UI rendering based on state
 - `cartPage.ts` → Full cart page rendering with quantity controls and order summary
 - `productService.ts` → Fetches products from Fake Store API
 - `search.ts` → Real-time product filtering
