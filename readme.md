@@ -8,12 +8,16 @@ This project is built to practice TypeScript fundamentals, including clean archi
 
 ## 🚀 Features
 
+- Fetch real products from the [Fake Store API](https://fakestoreapi.com)
+- Search and filter products in real time
 - Add products to cart
 - Remove products from cart
 - Update product quantity
-- Dynamic cart counter
-- State-based cart management
+- Dynamic cart counter (persists across pages)
+- Dedicated cart page with order summary
+- State-based cart management with `localStorage` persistence
 - Clean separation of concerns
+- Fully responsive (desktop, tablet, mobile)
 
 ---
 
@@ -30,42 +34,50 @@ The project follows a modular structure:
             ├── typescript.svg
             ├── vite.svg
         └── 📁src
-            ├── main.ts
+            ├── main.ts              
+            ├── cartPage.ts          
             ├── types.ts
             ├── state/
             │     └── cartState.ts
             │
             ├── services/
-            │     └── cartService.ts
+            │     ├── cartService.ts
+            │     └── productService.ts
             │
             ├── ui/
             │     ├── renderCart.ts
-            │     └── cartEvents.ts
-            │     └── renderProducts.ts
+            │     ├── cartEvents.ts
+            │     ├── renderProducts.ts
             │     └── search.ts
             │
             └── utils/
                 └── format.ts
         ├── .gitignore
-        ├── index.html
+        ├── index.html               ← Shop page
+        ├── cart.html                ← Cart page
         ├── package-lock.json
         ├── package.json
         └── tsconfig.json
 ```
 
-- `renderProducts.ts` → Product rendering
-- `cartService.ts` → Cart logic (add/remove/update)
-- `cartState.ts` → Centralized cart state
-- `renderCart.ts` → UI rendering based on state
+- `renderProducts.ts` → Product grid rendering + cart count sync
+- `cartService.ts` → Cart logic (add / remove / update quantity)
+- `cartState.ts` → Centralized cart state with `localStorage` persistence
+- `renderCart.ts` → Sidebar cart UI rendering based on state
+- `cartPage.ts` → Full cart page rendering with quantity controls and order summary
+- `productService.ts` → Fetches products from Fake Store API
+- `search.ts` → Real-time product filtering
 
-Cart UI is derived from state instead of manual DOM counters.
+Cart UI is derived from state instead of manual DOM counters. The cart persists across page navigation via `localStorage`.
 
 ---
 
 ## 🛠 Tech Stack
 
 - TypeScript
+- Vite
 - DOM API
+- Fake Store API
 - Modular architecture (ES6 Modules)
 
 ---
@@ -78,5 +90,3 @@ cd ecommerce-carttt
 npm install
 npm run dev
 ```
-
-
