@@ -1,7 +1,4 @@
-/* // ==============================
-// TYPES
-// ==============================
-
+/* 
 interface Product {
   id: string
   name: string
@@ -12,10 +9,6 @@ interface CartItem {
   product: Product
   quantity: number
 }
-
-// ==============================
-// SELECTORS
-// ==============================
 
 const addToCartButtons = document.querySelectorAll(".add-to-cart")
 const cartItemsContainer = document.querySelector(".cart-items") as HTMLElement
@@ -28,9 +21,6 @@ const cartCountElement = document.querySelector(".cart-count") as HTMLElement
 
 let cart: CartItem[] = []
 
-// ==============================
-// ADD TO CART LOGIC
-// ==============================
 
 addToCartButtons.forEach(button => {
   button.addEventListener("click", (event) => {
@@ -55,9 +45,6 @@ addToCartButtons.forEach(button => {
   })
 })
 
-// ==============================
-// CORE FUNCTIONS
-// ==============================
 
 function addToCart(product: Product) {
 
@@ -95,9 +82,6 @@ function updateQuantity(productId: string, quantity: number) {
   renderCart()
 }
 
-// ==============================
-// RENDER FUNCTION
-// ==============================
 
 function renderCart() {
 
@@ -133,9 +117,6 @@ function renderCart() {
   updateCartCount()
 }
 
-// ==============================
-// EVENTS INSIDE CART
-// ==============================
 
 function attachCartEvents() { 
 
@@ -158,9 +139,6 @@ function attachCartEvents() {
   })
 }
 
-// ==============================
-// UPDATE TOTAL
-// ==============================
 
 function updateTotalPrice() {
 
@@ -171,9 +149,6 @@ function updateTotalPrice() {
   totalPriceElement.textContent = `$${total.toFixed(2)}`
 }
 
-// ==============================
-// UPDATE COUNTER
-// ==============================
 
 function updateCartCount() {
 

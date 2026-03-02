@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Cart – ShopX</title>
+    <link rel="shortcut icon" href="./public/typescript.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/src/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+
+    <header class="header">
+      <a href="/" class="logo">ShopX</a>
+
+      <div class="search-bar">
+        <input id="search-bar" type="text" placeholder="Search products..." disabled />
+      </div>
+
+      <a href="/cart.html" class="cart-icon">
+        🛒
+        <span class="cart-count">0</span>
+      </a>
+    </header>
+
+    <main class="cart-page-container">
+
+      <div class="cart-page-header">
+        <h1 class="cart-page-title">Your Cart</h1>
+        <a href="/" class="continue-shopping">← Continue Shopping</a>
+      </div>
+
+      <div class="cart-page-layout">
+
+       
+        <section class="cart-page-items" id="cart-page-items">
+        </section>
+
+        <aside class="cart-page-summary">
+          <h2 class="summary-title">Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summary-subtotal">$0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="summary-shipping">Free</span>
+          </div>
+          <div class="summary-row summary-total-row">
+            <span>Total</span>
+            <span id="summary-total">$0.00</span>
+          </div>
+
+          <button class="checkout-btn cart-page-checkout">Checkout</button>
+          <p class="secure-note">🔒 Secure checkout</p>
+        </aside>
+
+      </div>
+
+    </main>
+
+    <script type="module" src="/src/cartPage.ts"></script>
+  </body>
+</html>
